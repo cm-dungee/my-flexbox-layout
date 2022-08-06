@@ -94,70 +94,90 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+   * {
+	   /* border: 1px dotted yellow; */
+   }
+
 html {
 	background-color: #004C54;
 	height: 100%;
+	width: 100%;
+	/* overflow: hidden; */
 }
 body {
 	font-family: 'Nokora', sans-serif;
-	color: #fff;
-	letter-spacing: .1em;
-	font-size: 1.25em;
-	height: 100%;
+	padding: 0 2em;
+    font-size: 1em;
+    color: #fff;
+	background-color: #004C54;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+    justify-content: center;
 }
-main {
-	width: 75%;
-	height: 70%;
+.flex-container {
+	max-width: 70%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: space-between;
 }
 header {
+	width: 100%;
 	font-family: 'Playfair Display', serif;
-	font-size: 3rem;
+	font-size: 3.5rem;
 	font-weight: 700;
-	/* border: 1px dotted yellow; */
 }
-.intro {
-	padding: .5rem;
+main {
+	width: 100%;
+	border-bottom: 3px solid #ACC0C6;
+	margin-bottom: 15px;
+}
+main p {
 	font-size: 1.5rem;
-	font-weight: 600;
-	/* border: 1px dotted yellow; */
+}
+.columns {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 10px;
+}
+.flex-items {
+	width: 25%;
+	padding-right: 5%;
+}
+#div-1, #div-2 {
+	border-right: 1px solid #ACC0C6;
+}
+.flex-items p {
+	font-size: 1.1rem;
+	line-height: 2rem;
+}
+footer {
+	width: 100%;
+	border-top: 3px solid #ACC0C6;
+	margin-top: 15px;
+}
+footer img {
+	padding-top: 30px;
+	padding-right: 20px;
 }
 span {
 	text-transform: uppercase;
-	text-shadow: 1.5px 1.5px #000;
-	font-weight: 800;
-}
-.about {
-	display: flex;
-	justify-content: center;
-	padding: 1em;
-	/* border: 1px dotted yellow; */
-}
-.about div {
-	color: #fff;
-	font-size: 1.1rem;
-	width: 100%;
-	padding: 1em;
-}
-.col-1, .col-2 {
-	border-right: 2px solid #A5ACAF;
-	border-radius: 3px;
-}
-footer {
-	padding: 1em;
-}
-.border {
-	border-top: 4px solid #A5ACAF;
-	border-radius: 3px;
+	text-shadow: 1px 1px #000;
+	font-family: 'Playfair Display', serif;
 }
 
-
+@media screen and (max-width: 768px) {
+	.columns {
+		display: flex;
+		flex-direction: column;
+	}
+	.flex-items {
+		width: 100%;
+		padding: 0px;
+	}
+	#div-1, #div-2 {
+		border-right: hidden;
+	}
+}
 
 /* ==========================================================================
    Helper classes
